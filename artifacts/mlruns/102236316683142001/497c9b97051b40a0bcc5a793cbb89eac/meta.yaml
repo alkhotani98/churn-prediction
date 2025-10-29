@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/2025/8/chrun-spotify/artifacts/mlruns/102236316683142001/497c9b97051b40a0bcc5a793cbb89eac/artifacts
+end_time: 1761644986868
+entry_point_name: ''
+experiment_id: '102236316683142001'
+lifecycle_stage: active
+run_id: 497c9b97051b40a0bcc5a793cbb89eac
+run_name: honorable-bug-860
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761644986667
+status: 3
+tags: []
+user_id: aalkhotani

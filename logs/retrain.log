@@ -1,0 +1,52 @@
+2025/10/29 12:15:58 WARNING mlflow.utils.git_utils: Failed to import Git (the Git executable is probably not on your PATH), so Git SHA is not available. Error: Failed to initialize: Bad git executable.
+The git executable must be specified in one of the following ways:
+    - be included in your $PATH
+    - be set via $GIT_PYTHON_GIT_EXECUTABLE
+    - explicitly set via git.refresh(<full-path-to-git-executable>)
+
+All git commands will error until this is rectified.
+
+This initial message can be silenced or aggravated in the future by setting the
+$GIT_PYTHON_REFRESH environment variable. Use one of the following values:
+    - quiet|q|silence|s|silent|none|n|0: for no message or exception
+    - warn|w|warning|log|l|1: for a warning message (logging level CRITICAL, displayed by default)
+    - error|e|exception|raise|r|2: for a raised exception
+
+Example:
+    export GIT_PYTHON_REFRESH=quiet
+
+2025/10/29 12:15:58 WARNING mlflow.models.model: `artifact_path` is deprecated. Please use `name` instead.
+C:\Users\Ahmed Bukhari\Desktop\Abdullah\chrun-spotify\.venv\Lib\site-packages\xgboost\core.py:160: UserWarning: [12:15:58] WARNING: C:\buildkite-agent\builds\buildkite-windows-cpu-autoscaling-group-i-0b3782d1791676daf-1\xgboost\xgboost-ci-windows\src\c_api\c_api.cc:1240: Saving into deprecated binary model format, please consider using `json` or `ubj`. Model format will default to JSON in XGBoost 2.2 if not specified.
+  warnings.warn(smsg, UserWarning)
+2025/10/29 12:16:04 WARNING mlflow.models.model: Model logged without a signature and input example. Please set `input_example` parameter when logging the model to auto infer the model signature.
+Registered model 'xgb_churn_model' already exists. Creating a new version of this model...
+Created version '7' of model 'xgb_churn_model'.
+C:\Users\Ahmed Bukhari\Desktop\Abdullah\chrun-spotify\Scripts\retrain.py:108: FutureWarning: ``mlflow.tracking.client.MlflowClient.get_latest_versions`` is deprecated since 2.9.0. Model registry stages will be removed in a future major release. To learn more about the deprecation of model registry stages, see our migration guide here: https://mlflow.org/docs/latest/model-registry.html#migrating-from-stages
+  versions = client.get_latest_versions("xgb_churn_model")
+C:\Users\Ahmed Bukhari\Desktop\Abdullah\chrun-spotify\Scripts\retrain.py:111: FutureWarning: ``mlflow.tracking.client.MlflowClient.transition_model_version_stage`` is deprecated since 2.9.0. Model registry stages will be removed in a future major release. To learn more about the deprecation of model registry stages, see our migration guide here: https://mlflow.org/docs/latest/model-registry.html#migrating-from-stages
+  client.transition_model_version_stage(
+== Retraining pipeline START ==
+clean_basics: rows: 278154
+clean_basics: saved: C:\Users\Ahmed Bukhari\Desktop\Abdullah\chrun-spotify\data\processed\clean_mini.parquet
+make_dataset: users in features: 215
+make_dataset: final rows: 215
+make_dataset: churn dist:
+ churn
+0    156
+1     59
+Name: count, dtype: int64
+make_dataset: saved: C:\Users\Ahmed Bukhari\Desktop\Abdullah\chrun-spotify\data\processed\train_mini.parquet
+ROC-AUC: 0.6693548387096774
+              precision    recall  f1-score   support
+
+           0       0.77      0.87      0.82        31
+           1       0.50      0.33      0.40        12
+
+    accuracy                           0.72        43
+   macro avg       0.64      0.60      0.61        43
+weighted avg       0.70      0.72      0.70        43
+
+Saved model -> C:\Users\Ahmed Bukhari\Desktop\Abdullah\chrun-spotify\models\xgb_model.pkl
+Registered xgb_churn_model v7 -> STAGING
+== Retraining pipeline DONE ==
+ExitCode=0 

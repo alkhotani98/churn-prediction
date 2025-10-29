@@ -1,0 +1,6 @@
+artifact_location: file:///C:/2025/8/chrun-spotify/artifacts/mlruns/102236316683142001
+creation_time: 1761644985232
+experiment_id: '102236316683142001'
+last_update_time: 1761644985232
+lifecycle_stage: active
+name: churn_xgb

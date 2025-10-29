@@ -1,0 +1,10 @@
+data/raw/
+data/processed/
+mlruns/
+models/
+logs/
+__pycache__/
+*.pkl
+*.parquet
+*.db
+*.json
